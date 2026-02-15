@@ -1,0 +1,27 @@
+{
+  "name": "jax_devcontainer gpu",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-24.04",
+  "runArgs": [
+    "--gpus", "all"
+  ],
+  "features": {
+    "ghcr.io/devcontainers-extra/features/uv-tool:1": {
+      "package": "ruff"
+    },
+    "ghcr.io/devcontainers-extra/features/ty:1": {}
+  },
+  "remoteUser": "vscode",
+  "updateRemoteUserUID": true,
+  "customizations": {
+    "vscode": {
+      "extentions": [
+        "ms-python.python",
+        "ms-python.debugpy",
+        "charliermarsh.ruff",
+        "astral-sh.ty",
+        "ms-toolsai.jupyter"
+      ]
+    }
+  },
+  "postCreateCommand": "/bin/bash .devcontainer/postCreateScript.sh"
+}
