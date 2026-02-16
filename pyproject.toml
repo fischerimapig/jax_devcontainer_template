@@ -1,0 +1,22 @@
+[project]
+name = "jax-devcontainer-template"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "flax",
+    "grain",
+    "jax",
+    "numpy",
+    "pandas",
+    "pyarrow",
+    "pytest",
+    "pytest-mock",
+]
+
+# for Nvidia GPU node
+[project.optional-dependencies]
+cuda = [
+    "jax[cuda12]",
+]

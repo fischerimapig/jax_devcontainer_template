@@ -1,5 +1,5 @@
 {
-  "name": "jax_devcontainer",
+  "name": "JAX CPU (Mac/x86)",
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu-24.04",
   "features": {
     "ghcr.io/devcontainers-extra/features/uv-tool:1": {
@@ -11,7 +11,7 @@
   "updateRemoteUserUID": true,
   "customizations": {
     "vscode": {
-      "extentions": [
+      "extensions": [
         "ms-python.python",
         "ms-python.debugpy",
         "charliermarsh.ruff",
@@ -20,5 +20,6 @@
       ]
     }
   },
+  // パスが変わるので ../ で親ディレクトリのスクリプトを参照
   "postCreateCommand": "/bin/bash .devcontainer/postCreateScript.sh"
 }

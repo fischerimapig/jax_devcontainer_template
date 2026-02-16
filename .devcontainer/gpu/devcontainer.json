@@ -1,5 +1,5 @@
 {
-  "name": "jax_devcontainer gpu",
+  "name": "JAX GPU (Linux)",
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu-24.04",
   "runArgs": [
     "--gpus", "all"
@@ -14,9 +14,8 @@
   "updateRemoteUserUID": true,
   "customizations": {
     "vscode": {
-      "extentions": [
+      "extensions": [
         "ms-python.python",
-        "ms-python.debugpy",
         "charliermarsh.ruff",
         "astral-sh.ty",
         "ms-toolsai.jupyter"
