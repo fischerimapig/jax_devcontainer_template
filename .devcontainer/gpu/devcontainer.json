@@ -4,11 +4,15 @@
   "runArgs": [
     "--gpus", "all"
   ],
+  "mounts": [
+    "source=${localEnv:HOME}/vscode-cache/tensorflow_datasets,target=/home/vscode/tensorflow_datasets,type=bind,consistency=cached"
+  ],
   "features": {
     "ghcr.io/devcontainers-extra/features/uv-tool:1": {
       "package": "ruff"
     },
-    "ghcr.io/devcontainers-extra/features/ty:1": {}
+    "ghcr.io/devcontainers-extra/features/ty:1": {},
+    "ghcr.io/va-h/devcontainers-features/difftastic:1": {}
   },
   "remoteUser": "vscode",
   "updateRemoteUserUID": true,
@@ -22,5 +26,6 @@
       ]
     }
   },
+  "shutdownAction": "stopContainer",
   "postCreateCommand": "/bin/bash .devcontainer/postCreateScript.sh"
 }

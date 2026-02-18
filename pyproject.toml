@@ -8,11 +8,14 @@ dependencies = [
     "flax",
     "grain",
     "jax",
+    "matplotlib",
     "numpy",
     "pandas",
     "pyarrow",
     "pytest",
     "pytest-mock",
+    "tensorflow",
+    "tensorflow-datasets",
 ]
 
 # for Nvidia GPU node
